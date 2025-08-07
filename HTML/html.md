@@ -83,5 +83,5 @@
 
 ## 12. 폼 태그
     - 사용자가 데이터를 입력하는 태그
-    - input, button, radio, checkbox...
+    - input, button, radio, checkbox..
     - 사용자가 입력한 데이터를 백엔드로 전송하는 방법을 반드시 숙지!
