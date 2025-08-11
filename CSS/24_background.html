@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-image</title>
+    <style>
+        img {
+            width: 150px;
+        }
+        div {
+            width: 20%;
+            height: 300px;
+            border: 1px solid gray;
+            text-align: center;
+            display: inline-block;
+        }
+        .img1, .img3 {
+            background-color:cornsilk;
+            /* opacity: .5; */
+        }
+        .img2, .img4 {
+            background-image: url(../HTML/images/background_2.png);
+        }
+        body {
+            background-image: url("https://www.lottecinema.co.kr/NLCHS/Content/images/common/logo.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background-image Style</h1>
+    <div class="img1">
+        <h3>Image #1</h3>
+        <img src="../HTML/images/cute.png" alt="dog images#1">
+    </div>
+    <div class="img2">
+        <h3>Image #2</h3>
+        <img src="../HTML/images/cute2.png" alt="dog images#2">
+    </div>
+    <div class="img3">
+        <h3>Image #1</h3>
+        <img src="../HTML/images/cute.png" alt="dog images#1">
+    </div>
+    <div class="img4">
+        <h3>Image #2</h3>
+        <img src="../HTML/images/cute2.png" alt="dog images#2">
+    </div>
+</body>
+</html>
