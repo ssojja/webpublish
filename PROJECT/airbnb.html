@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="header-logo">
+                <svg class="header-logo-img" width="102" height="32" viewBox="0 0 3490 1080" style="display: block;">
+                <path d="M1494.71 456.953C1458.28 412.178 1408.46 389.892 1349.68 389.892C1233.51 389.892 1146.18 481.906 1146.18 605.892C1146.18 729.877 1233.51 821.892 1349.68 821.892C1408.46 821.892 1458.28 799.605 1494.71 754.83L1500.95 810.195H1589.84V401.588H1500.95L1494.71 456.953ZM1369.18 736.895C1295.33 736.895 1242.08 683.41 1242.08 605.892C1242.08 528.373 1295.33 474.888 1369.18 474.888C1443.02 474.888 1495.49 529.153 1495.49 605.892C1495.49 682.63 1443.8 736.895 1369.18 736.895ZM1656.11 810.195H1750.46V401.588H1656.11V810.195ZM948.912 666.715C875.618 506.859 795.308 344.664 713.438 184.809C698.623 155.177 670.554 98.2527 645.603 67.8412C609.736 24.1733 556.715 0.779785 502.915 0.779785C449.115 0.779785 396.094 24.1733 360.227 67.8412C335.277 98.2527 307.207 155.177 292.392 184.809C210.522 344.664 130.212 506.859 56.9187 666.715C47.5621 687.769 24.9504 737.675 16.3736 760.289C6.2373 787.581 0.779297 817.213 0.779297 846.845C0.779297 975.509 101.362 1079.22 235.473 1079.22C346.193 1079.22 434.3 1008.26 502.915 934.18C571.53 1008.26 659.638 1079.22 770.357 1079.22C904.468 1079.22 1005.83 975.509 1005.83 846.845C1005.83 817.213 999.593 787.581 989.457 760.289C980.88 737.675 958.268 687.769 948.912 666.715ZM502.915 810.195C447.555 738.455 396.094 649.56 396.094 577.819C396.094 506.079 446.776 470.209 502.915 470.209C559.055 470.209 610.516 508.419 610.516 577.819C610.516 647.22 558.275 738.455 502.915 810.195ZM770.357 998.902C688.362 998.902 618.032 941.557 555.741 872.656C619.966 792.541 690.826 679.121 690.826 577.819C690.826 458.513 598.04 389.892 502.915 389.892C407.79 389.892 315.784 458.513 315.784 577.819C315.784 679.098 386.145 792.478 450.144 872.593C387.845 941.526 317.491 998.902 235.473 998.902C146.586 998.902 81.0898 931.061 81.0898 846.845C81.0898 826.57 84.2087 807.856 91.2261 788.361C98.2436 770.426 120.855 720.52 130.212 701.025C203.505 541.17 282.256 380.534 364.126 220.679C378.941 191.047 403.891 141.921 422.605 119.307C442.877 94.3538 470.947 81.0975 502.915 81.0975C534.883 81.0975 562.953 94.3538 583.226 119.307C601.939 141.921 626.89 191.047 641.704 220.679C723.574 380.534 802.325 541.17 875.618 701.025C884.975 720.52 907.587 770.426 914.604 788.361C921.622 807.856 925.52 826.57 925.52 846.845C925.52 931.061 859.244 998.902 770.357 998.902ZM3285.71 389.892C3226.91 389.892 3175.97 413.098 3139.91 456.953V226.917H3045.56V810.195H3134.45L3140.69 754.83C3177.12 799.605 3226.94 821.892 3285.71 821.892C3401.89 821.892 3489.22 729.877 3489.22 605.892C3489.22 481.906 3401.89 389.892 3285.71 389.892ZM3266.22 736.895C3191.6 736.895 3139.91 682.63 3139.91 605.892C3139.91 529.153 3191.6 474.888 3266.22 474.888C3340.85 474.888 3393.32 528.373 3393.32 605.892C3393.32 683.41 3340.07 736.895 3266.22 736.895ZM2827.24 389.892C2766.15 389.892 2723.56 418.182 2699.37 456.953L2693.13 401.588H2604.24V810.195H2698.59V573.921C2698.59 516.217 2741.47 474.888 2800.73 474.888C2856.87 474.888 2888.84 513.097 2888.84 578.599V810.195H2983.19V566.903C2983.19 457.733 2923.15 389.892 2827.24 389.892ZM1911.86 460.072L1905.62 401.588H1816.73V810.195H1911.08V604.332C1911.08 532.592 1954.74 486.585 2027.26 486.585C2042.85 486.585 2058.44 488.144 2070.92 492.043V401.588C2059.22 396.91 2044.41 395.35 2028.04 395.35C1978.58 395.35 1936.66 421.177 1911.86 460.072ZM2353.96 389.892C2295.15 389.892 2244.21 413.098 2208.15 456.953V226.917H2113.8V810.195H2202.69L2208.93 754.83C2245.36 799.605 2295.18 821.892 2353.96 821.892C2470.13 821.892 2557.46 729.877 2557.46 605.892C2557.46 481.906 2470.13 389.892 2353.96 389.892ZM2334.46 736.895C2259.84 736.895 2208.15 682.63 2208.15 605.892C2208.15 529.153 2259.84 474.888 2334.46 474.888C2409.09 474.888 2461.56 528.373 2461.56 605.892C2461.56 683.41 2408.31 736.895 2334.46 736.895ZM1703.28 226.917C1669.48 226.917 1642.08 254.326 1642.08 288.13C1642.08 321.934 1669.48 349.343 1703.28 349.343C1737.09 349.343 1764.49 321.934 1764.49 288.13C1764.49 254.326 1737.09 226.917 1703.28 226.917Z" fill="currentcolor"></path>
+                </svg>
+            </div>
+            <nav>
+                <ul class="header-stay">              
+                    <video class="header-stay-video" playsinline="" poster="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/4aae4ed7-5939-4e76-b100-e69440ebeae4.png?im_w=240" preload="auto"><source src="https://a0.muscache.com/videos/search-bar-icons/hevc/house-selected.mov#t=0.001" type="video/mp4; codecs=&quot;hvc1&quot;"><source src="https://a0.muscache.com/videos/search-bar-icons/webm/house-selected.webm" type="video/webm"></video>
+                    <li><a href="#" class="header-stay-item">숙소</a></li>
+                    <video class="header-stay-video" playsinline="" poster="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/e47ab655-027b-4679-b2e6-df1c99a5c33d.png?im_w=240" preload="auto"><source src="https://a0.muscache.com/videos/search-bar-icons/hevc/balloon-selected.mov#t=0.001" type="video/mp4; codecs=&quot;hvc1&quot;"><source src="https://a0.muscache.com/videos/search-bar-icons/webm/balloon-selected.webm" type="video/webm"></video>
+                    <li><a href="#" class="header-stay-item">체험</a></li>
+                    <video class="header-stay-video" playsinline="" poster="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/3d67e9a9-520a-49ee-b439-7b3a75ea814d.png?im_w=240" preload="auto"><source src="https://a0.muscache.com/videos/search-bar-icons/hevc/consierge-selected.mov#t=0.001" type="video/mp4; codecs=&quot;hvc1&quot;"><source src="https://a0.muscache.com/videos/search-bar-icons/webm/consierge-selected.webm" type="video/webm"></video>
+                    <li><a href="#" class="header-stay-item">서비스</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul class="header-menu">              
+                    <li><a href="#" class="header-menu-item hosting">호스팅 하기</a></li>
+                    <li><a href="#" class="header-menu-item"><i class="fa-solid fa-globe"></i></a></li>
+                    <li><a href="#" class="header-menu-item"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="paris" class="section container">
+            <a href="#" class="stay-title">파리의 인기 숙소 ></a>
+            <ul class="paris-stays">
+                <li class="paris-stay">
+                    <div class="paris-div">
+                        <img src="img2.jpg" alt="" class="paris-stay-img">
+                        <span class="paris-stay-guest">게스트 선호</span>
+                        <button class="paris-stay-btn"><span class="paris-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="paris-stay-text">
+                                <span class="paris-stay-title"><strong class="paris-stay-title strong">노트르담의 방</strong> <br>
+                                    12월 12일 ~ 14일 <br>
+                                    &#8361; 318,985 · 2박 · ★ 4.93
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="paris-stay">
+                    <div class="paris-div">
+                        <img src="img2.jpg" alt="" class="paris-stay-img">
+                        <span class="paris-stay-guest">게스트 선호</span>
+                        <button class="paris-stay-btn"><span class="paris-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="paris-stay-text">
+                                <span class="paris-stay-title"><strong class="paris-stay-title strong">Les Halles의 다인실</strong> <br>
+                                12월 12일 ~ 14일 <br>
+                                &#8361; 572,427 · 2박 · ★ 4.88
+                            </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="paris-stay">
+                    <div class="paris-div">
+                        <img src="img2.jpg" alt="" class="paris-stay-img">
+                        <span class="paris-stay-guest">게스트 선호</span>
+                        <button class="paris-stay-btn"><span class="paris-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="paris-stay-text">
+                                <span class="paris-stay-title"><strong class="paris-stay-title strong">팔레-부르봉의 방</strong> <br>
+                                    10월 31일 ~ 11월 2일 <br>
+                                    &#8361; 467,086 · 2박 · ★ 4.99
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="paris-stay">
+                    <div class="paris-div">
+                        <img src="img2.jpg" alt="" class="paris-stay-img">
+                        <span class="paris-stay-guest">게스트 선호</span>
+                        <button class="paris-stay-btn"><span class="paris-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="paris-stay-text">
+                                <span class="paris-stay-title"><strong class="paris-stay-title strong">리탱 지구의 방</strong> <br>
+                                    11월 14일 ~ 16일 <br>
+                                    &#8361; 457,096 · 2박 · ★ 4.98
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="paris-stay">
+                    <div class="paris-div">
+                        <img src="img2.jpg" alt="" class="paris-stay-img">
+                        <span class="paris-stay-guest">게스트 선호</span>
+                        <button class="paris-stay-btn"><span class="paris-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="paris-stay-text">
+                                <span class="paris-stay-title"><strong class="paris-stay-title strong">탕플의 콘도</strong> <br>
+                                    3월 27일 ~ 29일 <br>
+                                    &#8361; 379,141 · 2박 · ★ 4.76
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="paris-stay">
+                    <div class="paris-div">
+                        <img src="img2.jpg" alt="" class="paris-stay-img">
+                        <span class="paris-stay-guest">게스트 선호</span>
+                        <button class="paris-stay-btn"><span class="paris-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                               <a href="#" class="paris-stay-text">
+                               <span class="paris-stay-title"><strong class="paris-stay-title strong">파리 숙소</strong> <br>
+                                   11월 7일 ~ 9일 <br>
+                                   &#8361; 599,564 · 2박 · ★ 4.91
+                               </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="paris-stay">
+                    <div class="paris-div">
+                        <img src="img2.jpg" alt="" class="paris-stay-img">
+                        <span class="paris-stay-guest">게스트 선호</span>
+                        <button class="paris-stay-btn"><span class="paris-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="paris-stay-text">
+                                <span class="paris-stay-title"><strong class="paris-stay-title strong">파시의 아파트</strong> <br>
+                                    11월 21일 ~ 23일 <br>
+                                    &#8361; 380,287 · 2박 · ★ 4.85
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="london" class="section container">
+            <a href="#" class="stay-title">런던의 숙소 ></a>
+            <ul class="london-stays">
+                <li class="london-stay">
+                    <img src="img2.jpg" alt="" class="london-stay-img">
+                    <span class="london-stay-guest">게스트 선호</span>
+                        <button class="london-stay-btn"><span class="london-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="london-stay-text">
+                                <span class="london-stay-title"><strong class="london-stay-title strong">노트르담의 방</strong> <br>
+                                    12월 12일 ~ 14일 <br>
+                                    &#8361; 318,985 · 2박 · ★ 4.93
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="london-stay">
+                        <img src="img2.jpg" alt="" class="london-stay-img">
+                        <span class="london-stay-guest">게스트 선호</span>
+                        <button class="london-stay-btn"><span class="london-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="london-stay-text">
+                                <span class="london-stay-title"><strong class="london-stay-title strong">Les Halles의 다인실</strong> <br>
+                                12월 12일 ~ 14일 <br>
+                                &#8361; 572,427 · 2박 · ★ 4.88
+                            </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="london-stay">
+                        <img src="img2.jpg" alt="" class="london-stay-img">
+                        <span class="london-stay-guest">게스트 선호</span>
+                        <button class="london-stay-btn"><span class="london-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="london-stay-text">
+                                <span class="london-stay-title"><strong class="london-stay-title strong">팔레-부르봉의 방</strong> <br>
+                                    10월 31일 ~ 11월 2일 <br>
+                                    &#8361; 467,086 · 2박 · ★ 4.99
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="london-stay">
+                        <img src="img2.jpg" alt="" class="london-stay-img">
+                        <span class="london-stay-guest">게스트 선호</span>
+                        <button class="london-stay-btn"><span class="london-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="london-stay-text">
+                                <span class="london-stay-title"><strong class="london-stay-title strong">리탱 지구의 방</strong> <br>
+                                    11월 14일 ~ 16일 <br>
+                                    &#8361; 457,096 · 2박 · ★ 4.98
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="london-stay">
+                        <img src="img2.jpg" alt="" class="london-stay-img">
+                        <span class="london-stay-guest">게스트 선호</span>
+                        <button class="london-stay-btn"><span class="london-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="london-stay-text">
+                                <span class="london-stay-title"><strong class="london-stay-title strong">탕플의 콘도</strong> <br>
+                                    3월 27일 ~ 29일 <br>
+                                    &#8361; 379,141 · 2박 · ★ 4.76
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="london-stay">
+                        <img src="img2.jpg" alt="" class="london-stay-img">
+                        <span class="london-stay-guest">게스트 선호</span>
+                        <button class="london-stay-btn"><span class="london-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                               <a href="#" class="london-stay-text">
+                               <span class="london-stay-title"><strong class="london-stay-title strong">파리 숙소</strong> <br>
+                                   11월 7일 ~ 9일 <br>
+                                   &#8361; 599,564 · 2박 · ★ 4.91
+                               </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="london-stay">
+                        <img src="img2.jpg" alt="" class="london-stay-img">
+                        <span class="london-stay-guest">게스트 선호</span>
+                        <button class="london-stay-btn"><span class="london-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="london-stay-text">
+                                <span class="london-stay-title"><strong class="london-stay-title strong">파시의 아파트</strong> <br>
+                                    11월 21일 ~ 23일 <br>
+                                    &#8361; 380,287 · 2박 · ★ 4.85
+                                </span>
+                            </a>
+                        </div>
+                </li>
+            </ul>
+        </section>
+        <section id="sao" class="section container">
+            <a href="#" class="stay-title">Sao Paulo의 숙소 ></a>
+            <ul class="sao-stays">
+                <li class="sao-stay">
+                    <img src="img2.jpg" alt="" class="sao-stay-img">
+                    <span class="sao-stay-guest">게스트 선호</span>
+                        <button class="sao-stay-btn"><span class="sao-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="sao-stay-text">
+                                <span class="sao-stay-title"><strong class="sao-stay-title strong">노트르담의 방</strong> <br>
+                                    12월 12일 ~ 14일 <br>
+                                    &#8361; 318,985 · 2박 · ★ 4.93
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="sao-stay">
+                        <img src="img2.jpg" alt="" class="sao-stay-img">
+                        <span class="sao-stay-guest">게스트 선호</span>
+                        <button class="sao-stay-btn"><span class="sao-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="sao-stay-text">
+                                <span class="sao-stay-title"><strong class="sao-stay-title strong">Les Halles의 다인실</strong> <br>
+                                12월 12일 ~ 14일 <br>
+                                &#8361; 572,427 · 2박 · ★ 4.88
+                            </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="sao-stay">
+                        <img src="img2.jpg" alt="" class="sao-stay-img">
+                        <span class="sao-stay-guest">게스트 선호</span>
+                        <button class="sao-stay-btn"><span class="sao-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="sao-stay-text">
+                                <span class="sao-stay-title"><strong class="sao-stay-title strong">팔레-부르봉의 방</strong> <br>
+                                    10월 31일 ~ 11월 2일 <br>
+                                    &#8361; 467,086 · 2박 · ★ 4.99
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="sao-stay">
+                        <img src="img2.jpg" alt="" class="sao-stay-img">
+                        <span class="sao-stay-guest">게스트 선호</span>
+                        <button class="sao-stay-btn"><span class="sao-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="sao-stay-text">
+                                <span class="sao-stay-title"><strong class="sao-stay-title strong">리탱 지구의 방</strong> <br>
+                                    11월 14일 ~ 16일 <br>
+                                    &#8361; 457,096 · 2박 · ★ 4.98
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="sao-stay">
+                        <img src="img2.jpg" alt="" class="sao-stay-img">
+                        <span class="sao-stay-guest">게스트 선호</span>
+                        <button class="sao-stay-btn"><span class="sao-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="sao-stay-text">
+                                <span class="sao-stay-title"><strong class="sao-stay-title strong">탕플의 콘도</strong> <br>
+                                    3월 27일 ~ 29일 <br>
+                                    &#8361; 379,141 · 2박 · ★ 4.76
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="sao-stay">
+                        <img src="img2.jpg" alt="" class="sao-stay-img">
+                        <span class="sao-stay-guest">게스트 선호</span>
+                        <button class="sao-stay-btn"><span class="sao-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                               <a href="#" class="sao-stay-text">
+                               <span class="sao-stay-title"><strong class="sao-stay-title strong">파리 숙소</strong> <br>
+                                   11월 7일 ~ 9일 <br>
+                                   &#8361; 599,564 · 2박 · ★ 4.91
+                               </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="sao-stay">
+                        <img src="img2.jpg" alt="" class="sao-stay-img">
+                        <span class="sao-stay-guest">게스트 선호</span>
+                        <button class="sao-stay-btn"><span class="sao-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="sao-stay-text">
+                                <span class="sao-stay-title"><strong class="sao-stay-title strong">파시의 아파트</strong> <br>
+                                    11월 21일 ~ 23일 <br>
+                                    &#8361; 380,287 · 2박 · ★ 4.85
+                                </span>
+                            </a>
+                        </div>
+                </li>
+            </ul>
+        </section>
+        <section id="seoul" class="section container">
+            <a href="#" class="stay-title">서울의 숙소 ></a>
+            <ul class="seoul-stays">
+                <li class="seoul-stay">
+                    <img src="img2.jpg" alt="" class="seoul-stay-img">
+                    <span class="seoul-stay-guest">게스트 선호</span>
+                        <button class="seoul-stay-btn"><span class="seoul-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="seoul-stay-text">
+                                <span class="seoul-stay-title"><strong class="seoul-stay-title strong">노트르담의 방</strong> <br>
+                                    12월 12일 ~ 14일 <br>
+                                    &#8361; 318,985 · 2박 · ★ 4.93
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="seoul-stay">
+                        <img src="img2.jpg" alt="" class="seoul-stay-img">
+                        <span class="seoul-stay-guest">게스트 선호</span>
+                        <button class="seoul-stay-btn"><span class="seoul-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="seoul-stay-text">
+                                <span class="seoul-stay-title"><strong class="seoul-stay-title strong">Les Halles의 다인실</strong> <br>
+                                12월 12일 ~ 14일 <br>
+                                &#8361; 572,427 · 2박 · ★ 4.88
+                            </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="seoul-stay">
+                        <img src="img2.jpg" alt="" class="seoul-stay-img">
+                        <span class="seoul-stay-guest">게스트 선호</span>
+                        <button class="seoul-stay-btn"><span class="seoul-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="seoul-stay-text">
+                                <span class="seoul-stay-title"><strong class="seoul-stay-title strong">팔레-부르봉의 방</strong> <br>
+                                    10월 31일 ~ 11월 2일 <br>
+                                    &#8361; 467,086 · 2박 · ★ 4.99
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="seoul-stay">
+                        <img src="img2.jpg" alt="" class="seoul-stay-img">
+                        <span class="seoul-stay-guest">게스트 선호</span>
+                        <button class="seoul-stay-btn"><span class="seoul-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="seoul-stay-text">
+                                <span class="seoul-stay-title"><strong class="seoul-stay-title strong">리탱 지구의 방</strong> <br>
+                                    11월 14일 ~ 16일 <br>
+                                    &#8361; 457,096 · 2박 · ★ 4.98
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="seoul-stay">
+                        <img src="img2.jpg" alt="" class="seoul-stay-img">
+                        <span class="seoul-stay-guest">게스트 선호</span>
+                        <button class="seoul-stay-btn"><span class="seoul-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="seoul-stay-text">
+                                <span class="seoul-stay-title"><strong class="seoul-stay-title strong">탕플의 콘도</strong> <br>
+                                    3월 27일 ~ 29일 <br>
+                                    &#8361; 379,141 · 2박 · ★ 4.76
+                                </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="seoul-stay">
+                        <img src="img2.jpg" alt="" class="seoul-stay-img">
+                        <span class="seoul-stay-guest">게스트 선호</span>
+                        <button class="seoul-stay-btn"><span class="seoul-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                               <a href="#" class="seoul-stay-text">
+                               <span class="seoul-stay-title"><strong class="seoul-stay-title strong">파리 숙소</strong> <br>
+                                   11월 7일 ~ 9일 <br>
+                                   &#8361; 599,564 · 2박 · ★ 4.91
+                               </span>
+                            </a>
+                        </div>
+                </li>
+                <li class="seoul-stay">
+                        <img src="img2.jpg" alt="" class="seoul-stay-img">
+                        <span class="seoul-stay-guest">게스트 선호</span>
+                        <button class="seoul-stay-btn"><span class="seoul-stay-heart"><i class="fa-solid fa-heart"></i></span></button>
+                        <div>
+                            <a href="#" class="seoul-stay-text">
+                                <span class="seoul-stay-title"><strong class="seoul-stay-title strong">파시의 아파트</strong> <br>
+                                    11월 21일 ~ 23일 <br>
+                                    &#8361; 380,287 · 2박 · ★ 4.85
+                                </span>
+                            </a>
+                        </div>
+                </li>
+            </ul>
+        </section>
+        <section id="recommend" class="section container">
+            <h3 class="recommend-section-title">다음 여행을 위한 추천 여행지</h3>
+            <hr style="border-width:1px 0 0 0; border-style:solid; border-color:#bbb;">
+            <div class="arrow-div">
+                <span><i class="fa-solid fa-angle-left"></i></span>
+                <span><i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <div class="recommends-div">
+                <ul class="recommends">
+                    <h3 class="recommend-title">에어비앤비 지원</h3>
+                    <li><a href="#" class="recommend">도움말 센터</a></li>
+                    <li><a href="#" class="recommend">에어커버</a></li>
+                    <li><a href="#" class="recommend">차별 반대</a></li>
+                    <li><a href="#" class="recommend">장애인 지원</a></li>
+                    <li><a href="#" class="recommend">예약 취소 옵션</a></li>
+                    <li><a href="#" class="recommend">이웃 민원 신고</a></li>
+                </ul>
+                <ul class="recommends">
+                    <h3 class="recommend-title">호스팅</h3>
+                    <li ><a href="#" class="recommend">당신의 공간을 에어비앤비하세요</a></li>
+                    <li ><a href="#" class="recommend">에어비앤비에서 체험 호스팅하기</a></li>
+                    <li ><a href="#" class="recommend">에어비앤비에서 서비스 호스팅하기</a></li>
+                    <li ><a href="#" class="recommend">호스트를 위한 에어커버</a></li>
+                    <li ><a href="#" class="recommend">호스팅 자료</a></li>
+                    <li ><a href="#" class="recommend">커뮤니티 포럼</a></li>
+                    <li ><a href="#" class="recommend">책임감 있는 호스팅</a></li>
+                    <li ><a href="#" class="recommend">무료 호스팅 클래스 참여하기</a></li>
+                    <li ><a href="#" class="recommend">공동 호스트 찾기</a></li>
+
+                </ul>
+                <ul class="recommends">
+                    <h3 class="recommend-title">에어비앤비</h3>
+                    <li ><a href="#" class="recommend">2025 여름 업그레이드</a></li>
+                    <li ><a href="#" class="recommend">뉴스룸</a></li>
+                    <li ><a href="#" class="recommend">채용정보</a></li>
+                    <li ><a href="#" class="recommend">투자자 정보</a></li>
+                    <li ><a href="#" class="recommend">Airbnb.org 긴급 숙소</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer container">
+        <hr style="border-width:1px 0 0 0; border-style:solid; border-color:#bbb;">
+        <div class="footer-div">
+            <ul class="links">
+                <p class="links-title">© 2025 Airbnb, Inc.</p>
+                <li><a href="#" class="link">· 개인정보 처리방침 </a></li>
+                <li><a href="#" class="link">· 쿠키 정책 </a></li>
+                <li><a href="#" class="link">· 이용약관 </a></li>
+                <li><a href="#" class="link">· 사이트맵 </a></li>
+                <li><a href="#" class="link">· 한국의 변경된 환불 정책 </a></li>
+                <li><a href="#" class="link">· 회사 세부정보 </a></li>
+            </ul>
+            <ul class="links">
+                <li><a href="#" class="link icon"><i class="fa-solid fa-globe"></i>한국어(KR)</a></li>
+                <li><a href="#" class="link icon">&#8361; KRW</a></li>
+                <li><a href="#" class="link icon"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="link icon"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="link icon"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" class="link icon"><i class="fa-regular fa-comment-dots"></i></a></li>
+                <li><a href="#" class="link icon"><i class="fa-solid fa-rocket"></i></a></li>
+            </ul>
+        </div>
+        <hr style="border-width:1px 0 0 0; border-style:solid; border-color:#bbb;">
+        <p class="copyright">웹사이트 제공자: Airbnb Ireland UC, private unlimited company, 8 Hanover Quay Dublin 2, 
+            D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호: IE9827384L | 
+            사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트, 080-822-0230 | 호스팅 서비스 제공업체: 아마존 웹서비스 | 
+            에어비앤비는 통신판매 중개자로 에어비앤비 플랫폼을 통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다. 
+            에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 서비스에 관한 의무와 책임은 해당 서비스를 제공하는 호스트에게 있습니다.</p>
+    </footer>
+</body>
+</html>
