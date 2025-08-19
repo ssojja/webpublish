@@ -43,4 +43,3 @@ if((number2 > 0) || (number2 > 100)){
 } else{
     console.log(`result = false`);
 }
-

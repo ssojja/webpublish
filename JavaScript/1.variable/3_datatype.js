@@ -49,5 +49,3 @@ console.log(typeof x === typeof y);     // === 값 & 데이터 타입 비교
 console.log(x == y);    // true
 console.log(x === y);   // false
 console.log(x == obj);  // false
-
-
