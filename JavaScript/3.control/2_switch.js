@@ -20,7 +20,6 @@ switch (day) {
         resultDay = useage;
         // console.log(useage);
 }
-// console.log(`선택한 요일은 [${resultDay}]입니다.`);
 console.log(resultDay);
 
 // 입력받은 값이 홀수면 빨간 사과, 짝수면 초록 사과 출력
