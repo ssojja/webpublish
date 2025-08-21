@@ -23,4 +23,3 @@ const createEmployee = (name, age, address) => {
 let emp1 = createEmployee('홍길동', 20, '서울시');
 let emp2 = createEmployee('김철수', 30, '부산시');
 console.log(emp1, emp2);
-
