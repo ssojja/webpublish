@@ -13,7 +13,6 @@ console.log(numbers);
 console.log(copyNumbers);
 console.log(concatNumbers);
 
-
 // 오브젝트 리터럴 객체 복사
 const hong = {
     name : '홍길동',
