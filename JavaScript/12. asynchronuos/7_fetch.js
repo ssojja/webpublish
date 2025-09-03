@@ -38,6 +38,7 @@ async function showResult() {
     `;
 
     console.log(`output => ${output}`);
+    
     // 3. innerHTML로 output 출력
     document.querySelector('#content').innerHTML = output;
 }
