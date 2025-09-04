@@ -19,7 +19,6 @@
     }
     // console.log(`aa, bb -> `, aa, bb);   
     // 로컬변수는 해당 스코프에서만 호출 가능
-
     let numbers = [1, 2, 3, 4, 5];
     for(const number of numbers){
         console.log(number);

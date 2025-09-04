@@ -76,7 +76,6 @@ async function showResult(sdate) {
         showResult(sdate);
     });
 
-    //
     let rows = document.querySelectorAll('.movieInfo');
     console.log(rows);
     rows.forEach((row) => {
