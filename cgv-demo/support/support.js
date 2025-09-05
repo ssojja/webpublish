@@ -3,17 +3,33 @@ window.addEventListener('DOMContentLoaded', function() {
     filterMenuEvent();
 })
 
+function menuDefaultColor(menu) {
+    menu.style.background = "rgb(137, 137, 135)";
+    menu.style.borderLeft = "1px solid var(rgb(137, 137, 135))";
+    menu.style.borderBottom = "2px solid var(rgb(137, 137, 135))";
+}
+
+function menuSelectColor(menu) {
+    menu.style.background = "rgb(251, 67, 87)";
+    menu.style.borderLeft = "1px solid var(rgb(251, 67, 87))";
+    menu.style.borderBottom = "2px solid var(rgb(251, 67, 87))";
+}
+
 function filterMenuEvent() {
     let menuList = document.querySelectorAll(".filter-menu a");
-    menuList.forEach((menu) => {
-        // 버튼 이벤트 추가
-        menu.addEventListener('click', () => {
-            let type = menu.id;
-            // filterData(type);
-            createTable(type);
-        });
 
+    // 처음 호출 시 버튼 색상
+    menuList.forEach(menu => {
+        menu.id === 'all' ? menuSelectColor(menu) : menuDefaultColor(menu);
     })
+
+    menuList.forEach((menu) => {
+        menu.addEventListener('click', ()=>{
+            menuList.forEach(menu => menuDefaultColor(menu));
+            menuSelectColor(menu);
+            createTable(menu.id);
+        });
+    });     
 }
 
 async function filterData(type) {
