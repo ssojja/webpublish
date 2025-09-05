@@ -32,7 +32,7 @@ async function getAPI(sdate) {
 }
 
 function createSdate() {
-     let today = new Date;
+    let today = new Date;
     let year = today.getFullYear();
     let month = today.getMonth() + 1;
     let day = today.getDay() - 1;
