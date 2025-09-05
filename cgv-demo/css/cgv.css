@@ -206,8 +206,8 @@ footer {
 .content-top iframe,
 .content-moviechart > div,
 .content-event-special {
-    display: block;
     width: 1000px;
+    display: block;
     margin: 0 auto;
 }
 
@@ -747,4 +747,23 @@ footer {
     font-size: 1.2em;
     font-weight: 700;
     letter-spacing: 5px;
+}
+/**
+    메인화면 swiper style
+*/
+.swiper {
+    width: 400px;
+    height: 300px;
+    border: 1px solid gray;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.swiper-img {
+    width: 50%;
+    position: absolute;
+    top: 8px;
+    left: 25%;
 }
