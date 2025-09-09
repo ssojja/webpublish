@@ -5,6 +5,7 @@ import { MyButton } from './components/MyButton.jsx';
 import { Menu } from './components/Menu.jsx';
 import { Menu2 } from './components/Menu2.jsx';
 import { MenuList } from './components/MenuList.jsx';
+import { AvartarImage } from './components/AvatarImage.jsx';
 
 export default function App() {
   const menu1 = {
@@ -67,6 +68,10 @@ export default function App() {
       <Menu2 data={menu1}/>
       <hr/>
       <MenuList menus={menus}/>
+      <hr/>
+      <AvartarImage img="/images/people1.webp"/>
+      <AvartarImage img="/images/people2.webp"/>
+      <AvartarImage img="/images/people3.webp"/>
     </>
   );
 }
