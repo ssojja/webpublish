@@ -5,19 +5,28 @@ import './App.css';
 /* 자식 > 부모(누적합) > 자식(결과 전송) */
 
 export default function App() {
-    const [total, setTotal] = useState(0);
+    const [total, setTotal] = useState(0);  //변수의 상태관리 hooks
+    const [init, setInit] = useState(0);    //자식 초기화 : 0, 1 값을 토글(Toggle)
+
+    // let total = 0;
+    // const setTotal = (value) => {   // 이벤트 발생 시 업데이트가 되지 않기에 useState를 사용함
+    //     total = value;
+    // }
 
     const click = (type) => { // 자식 컴포넌트의 클릭이벤트 결과 가져오기
         if(type === "+") setTotal(total + 1);
         else if(type === "-") setTotal(total - 1);
-        else if(type === 0) setTotal(0);
+        else if(type === 0) {
+            setTotal(0);
+            setInit(!init);
+        }
     }
 
     return (
         <>
-            <h1>Counter Test</h1>
-            <Counter click={click} total={total} init={0}/>
-            <Counter click={click} total={total} init={0}/>
+            <h1>Counter Test : {total}</h1>
+            <Counter click={click} total={total} init={init}/>
+            <Counter click={click} total={total} init={init}/>
         </>
     );
 }
