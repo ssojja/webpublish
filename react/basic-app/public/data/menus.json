@@ -1,0 +1,43 @@
+{
+    "headerLeft" : [
+        {
+            "href":"#",
+            "name":"인스타그램",
+            "style":{
+                "w":"200px",
+                "h":"30px",
+                "bg":"#fff",
+                "color":"#999"
+            },
+
+            "isIcon": true,
+            "icon":"❤"
+        },
+        {
+            "href":"#",
+            "name":"유튜브",
+            "style":{
+                "w":"200px",
+                "h":"30px",
+                "bg":"#fff",
+                "color":"#999"
+            },
+            
+            "isIcon": true,
+            "icon":"🏀"
+        },
+        {
+            "href":"#",
+            "name":"페이스북",
+            "style":{
+                "w":"200px",
+                "h":"30px",
+                "bg":"#fff",
+                "color":"#999"
+            },
+            
+            "isIcon": true,
+            "icon":"🎫"
+        }
+    ]
+}

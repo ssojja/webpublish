@@ -5,12 +5,14 @@
     position: relative;
 }
 .best-product-img-no {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;    left: 0;
-    background-color: black;
-    color: white;
-    padding: 8px 12px;
-    /* font-weight: bold; */
+    /* background-color: black;
+    color: white; */
+    /* padding: 8px 12px; */
 }
 .best-product-img-like {
     position: absolute;
@@ -45,6 +47,11 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: #000;
+}
+.best-product-content-acc {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #777;
 }
 
 .best-product {
