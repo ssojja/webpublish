@@ -1,11 +1,23 @@
 .menu-item {
     display: flex;
     text-decoration: none;
-    text-align: center;
+    /* text-align: center; */
     align-items: center;
     justify-content: center;
 }
 .menu-list {
     display: flex;
     list-style-type: none;
+}
+.menu-list-item {
+    position: relative;
+}
+.menu-list-item-border {
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 10px;
+    background-color: antiquewhite;
 }

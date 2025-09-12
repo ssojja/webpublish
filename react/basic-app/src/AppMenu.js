@@ -1,25 +1,38 @@
 import './css/Menu.css';
-import { Menu } from './components/commons/Menu.jsx';
-import { HeaderLeft } from './components/menus/HeaderLeft.jsx';
+import { MenuList } from './components/menus/MenuList.jsx';
+import { useState, useEffect } from 'react';
+import { fetchData } from './util/commonData.js';
+import { Logo } from './components/commons/Logo.jsx';
 
 export default function App() {
+
+    const [menus, setMenus] = useState([]);
+    
+        useEffect(() => {
+            const fetch = async () => {
+                const data = await fetchData("/data/menus.json");
+                setMenus(data);
+            }
+            
+            fetch();
+        }, [])
+
     return (
-        <>
-            <HeaderLeft />
-            <div style={{"display":"flex"}}>
-                <Menu href="#"
-                        name="Menu#1"
-                        style={{"w":"100px", "h":"50px", "bg":"#777", "color":"#fff"}}
-                        isIcon="true"
-                        icon ="❤"
-                        />
-                <Menu href="#"
-                        name="Menu#2"
-                        style={{"w":"100px", "h":"50px", "bg":"#777", "color":"#fff"}}
-                        isIcon="false"
-                        icon ="❤"
-                        />
+        <div>
+            <div style={{display:"flex", 
+                        justifyContent:"space-between",
+                        borderBottom:"1px solid #888",
+                        paddingBottom:"20px"}}>
+                <MenuList menus={menus.headerLeft} />
+                <Logo img="/images/logoRed.png" alt="header-logo" w="150px" />
+                <MenuList menus={menus.headerRight} />
             </div>
-        </>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <MenuList menus={menus.headerCenter} />
+            </div>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <MenuList menus={menus.footerTop} />
+            </div>
+        </div>
     );
 }
