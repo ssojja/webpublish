@@ -24,8 +24,8 @@ export function UserInfo2() {
             <h1>UserInfo2</h1>
             <form>
                 <ul>
-                    { !forms || forms.map((item) => 
-                        <li>
+                    { !forms || forms.map((item, index) => 
+                        <li key={index}>
                             <label>{item.label}</label>
                             <TextInput  item={item}
                                         value={formData[item.name]}
