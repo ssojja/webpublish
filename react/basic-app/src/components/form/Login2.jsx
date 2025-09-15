@@ -64,7 +64,6 @@ export function Login2() {
                         <button type="reset" onClick={handleFormReset}>다시쓰기</button>
                     </li>
                 </ul>
-
             </form>
         </>
     );
