@@ -13,6 +13,7 @@ export default function App() {
                 <Routes>
                     {/* <Route path="" element={레이아웃 컴포넌트}>*/}
                     <Route path="/" element={<Layout/>}>  
+                        {/* <Route path="/" element={<Home/>} />            */}
                         <Route index element={<Home/>} />           
                         <Route path="/login" element={<Login/>} />
                         <Route path="/signup" element={<Signup/>} />           

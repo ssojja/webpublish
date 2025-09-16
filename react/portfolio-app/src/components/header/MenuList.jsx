@@ -3,10 +3,7 @@ import { Menu } from "./Menu.jsx";
 
 export function MenuList() {
     const menus = [
-        { 
-            "href": "#home",
-            "name":"Home" 
-        },
+        { "href": "#home", "name":"Home" },
         { "href": "#about",  "name":"About" },
         { "href": "#skill",  "name":"Skill" },
         { "href": "#work",  "name":"Work" },
@@ -25,12 +22,12 @@ export function MenuList() {
     return (
         <nav>
             <ul className="header-menu">
-                {menus && menus.map((item, index) =>
+                {menus && menus.map((menu, index) =>
                     <li key={index}>
-                        <Menu href={item.href}
-                                name={item.name} 
+                        <Menu href={menu.href}
+                                name={menu.name} 
                                 click={handleClick}
-                                style={active === menus[index].name ? 
+                                style={active === menu.name ? 
                                     "header-menu-item active" : "header-menu-item"} 
                         />
                     </li>
