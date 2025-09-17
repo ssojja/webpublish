@@ -1,19 +1,5 @@
 
-export function Jobs() {
-    const jobs = [
-        {
-            "img":"images/jobs/google.png",
-            "msg":"google",
-            "job":"Google as Junior Software Engineer",
-            "period":"2019 Oct - Until now"
-        },
-        {
-            "img":"images/jobs/samsung.png",
-            "msg":"samsung",
-            "job":"Samsung as Junior Software Engineer",
-            "period":"2010 Oct - 2019 Oct"
-        }
-    ]
+export function Jobs({jobs}) {
     return (
         <>
             <ul className="jobs">
