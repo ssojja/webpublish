@@ -7,13 +7,13 @@
     - npm i react-icons
 
 ## 폴더 구조
-src
- |- components : 재사용성 UI 구현 컴포넌트
- |- pages : 페이지 단위 컴포넌트, route에서 호출되는 컴포넌트
- |- utils : 유틸리티 함수
- |- hooks : 커스텀 Hook 저장
- |- styles(css) : CSS 스타일 테마
- |- App.js
+    src
+    |- components : 재사용성 UI 구현 컴포넌트
+    |- pages : 페이지 단위 컴포넌트, route에서 호출되는 컴포넌트
+    |- utils : 유틸리티 함수
+    |- hooks : 커스텀 Hook 저장
+    |- styles(css) : CSS 스타일 테마
+    |- App.js
 
 ## 프로젝트 설정 추가 : package.json
     - 모듈 타입 : "type":"module", 컴포넌트에 확장자를 반드시 추가!
