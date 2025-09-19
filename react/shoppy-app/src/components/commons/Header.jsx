@@ -12,7 +12,7 @@ export function Header({cartCount}) {
                 </Link>
                 <nav className="header-right">
                     <Link to="/all">Products</Link>
-                    <Link to="" className="header-icons-cart-link">
+                    <Link to="/cart" className="header-icons-cart-link">
                         <GiShoppingCart className="header-icons"/>
                         <span className="header-icons-cart">{cartCount}</span>
                     </Link>
