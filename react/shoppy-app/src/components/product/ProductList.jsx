@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ProductAvatar } from './ProductAvatar.jsx';
 import { axiosData, groupByRows } from '../../utils/dataFetch.js';
@@ -30,8 +31,10 @@ export function ProductList() {
         <div>            
             { rows && rows.map((rowArray, index) =>
                 <div className='product-list' key={index}>
-                    { rowArray && rowArray.map((product, index) => 
-                        <ProductAvatar img={product.image} key={index} />
+                    { rowArray && rowArray.map((product, index) =>
+                        <Link to={`/products/${product.pid}`}>
+                            <ProductAvatar img={product.image} key={index} />
+                        </Link> 
                     )}
                 </div>
             )}
