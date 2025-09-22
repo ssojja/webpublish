@@ -3,7 +3,11 @@ import { useParams } from 'react-router-dom';
 import { axiosData } from '../utils/dataFetch.js';
 import { PiGiftThin } from 'react-icons/pi';
 import { ImageList } from '../components/commons/ImageList.jsx';
-import { StarRating } from '../components/commons/StarRating.jsx'
+import { StarRating } from '../components/commons/StarRating.jsx';
+import { Detail } from '../components/detailTabs/Detail.jsx';
+import { Review } from '../components/detailTabs/Review.jsx';
+import { QnA } from '../components/detailTabs/QnA.jsx';
+import { Return } from '../components/detailTabs/Return.jsx';
 
 export function ProductDetail({addCart}) {
     const { pid } = useParams();    // { pid: 1 }
@@ -12,7 +16,7 @@ export function ProductDetail({addCart}) {
     const [imgList, setImgList] = useState([]);
     const tabLables = ['DETAIL', 'REVIEW', 'Q&A', 'RETURN & DELIVERY'];
     const [tabName, setTabName] = useState('detail');
-    const tabEventNames = ['detail', 'review', 'q&a', 'return'];
+    const tabEventNames = ['detail', 'review', 'qna', 'return'];
 
     useEffect(()=>{
         const filterData = async () => {
@@ -94,12 +98,18 @@ export function ProductDetail({addCart}) {
             <div className='product-detail-tab'>
                 <ul className='tabs'>
                     {tabLables && tabLables.map((lable, i) => 
-                        <li className={tabName === tabEventNames[i]? "active" : ""}>
+                        <li className={tabName === tabEventNames[i]? "active" : ""} key={i}>
                             <button type="button"
                                     onClick={()=>{setTabName(tabEventNames[i])}}>{lable}</button>
                         </li>
                     )}
                 </ul>
+                {tabName === "detail" 
+                                && <Detail imgList={imgList}
+                                            info={product.detailInfo} />}
+                {tabName === "review" && <Review />}
+                {tabName === "qna" && <QnA />}
+                {tabName === "return" && <Return />}
             </div>
             <div style={{marginBottom:"50px"}}></div>
         </div>
