@@ -11,7 +11,7 @@ export function updateCartItemQty(cartItems, cid, type) {
 /**
  * 상품 총 금액 구하기
  */
-export function getTotalPrice(products, items) {
+export function getTotalPrice(products, items) {    // 원본 데이터값, 장바구니 데이터값
     // items(배열)의 누적합 ==> 배열.reduce((누적합acc, 현재값cur, 인덱스, 원본배열)=>{}, 초기값)
     return items.reduce((total, item)=> {
         const product = products.find((product) => item.pid === product.pid);
@@ -27,8 +27,6 @@ export function cartItemsAddInfo(products, items) {
     return items.map((item)=> {    // []
         // 상품에 있는지 체크
         const product = products.find((product) => item.pid === product.pid);
-        // console.log(`item -> `, item);
-        // console.log(`product -> `, product);
         return {
             ...item,
             image: product.image,
@@ -49,7 +47,6 @@ export function cartItemsCheck(prevItems, cartItem) {
         return prevItems.map((item)=> item.pid === cartItem.pid && item.size === cartItem.size ? {...item, qty:item.qty+1} : item);
     } else {
         const cid = Math.floor(Math.random()*1000000);
-        console.log(`cid ->`, cid);
         
         return [...prevItems, {...cartItem, cid:cid }]; // 존재하지 않으면 새로운 item 추가
     }   

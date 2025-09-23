@@ -37,8 +37,6 @@ export default function App() {
       type === "+" ? setCartCount(cartCount + 1) 
                   : cartCount > 1 ? setCartCount(cartCount - 1) : setCartCount(cartCount);
     }
-
-
   }
 
   console.log(`cartItems --> `, cartItems);
