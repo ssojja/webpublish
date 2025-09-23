@@ -31,9 +31,9 @@ export function ProductList() {
         <div>            
             { rows && rows.map((rowArray, index) =>
                 <div className='product-list' key={index}>
-                    { rowArray && rowArray.map((product, index) =>
+                    { rowArray && rowArray.map((product, idx) =>
                         <Link to={`/products/${product.pid}`}>
-                            <ProductAvatar img={product.image} key={index} />
+                            <ProductAvatar img={product.image} key={idx} />
                         </Link> 
                     )}
                 </div>
