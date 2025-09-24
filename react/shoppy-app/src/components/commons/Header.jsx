@@ -1,8 +1,15 @@
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { FiShoppingBag } from "react-icons/fi";
 import { GiShoppingCart } from "react-icons/gi";
 
 export function Header({cartCount}) {
+
+    useEffect(()=>{
+        const loginInfo = localStorage.getItem("loginInfo");
+        console.log('loginInfo : ', JSON.parse(loginInfo).userId);
+    }, [])
+    
     return (
         <div className="header-outer">
             <div className="header">
@@ -22,6 +29,9 @@ export function Header({cartCount}) {
                     </Link>
                     <Link to="/signup">
                         <button type="button">Signup</button>
+                    </Link>
+                    <Link to="/support">
+                        <button type="button">Support</button>
                     </Link>
                 </nav>
             </div>

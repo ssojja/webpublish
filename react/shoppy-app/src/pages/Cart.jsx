@@ -1,10 +1,12 @@
 import '../styles/cart.css';
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { axiosData } from '../utils/dataFetch.js';
 import { cartItemsAddInfo, getTotalPrice } from '../utils/cart.js';
 
 export function Cart({items, updateCart}) {
+    const navigate = useNavigate();
     const [cartList, setCartList] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -41,7 +43,6 @@ export function Cart({items, updateCart}) {
     }   
 
     console.log(`cartList : `,cartList);
-    
 
     return (
         <div className='cart-container'>
@@ -67,33 +68,46 @@ export function Cart({items, updateCart}) {
                     </div>
                 </div>
             )}
+
             {/* 주문 버튼 출력 */}
-            <>
-                <div className='cart-summary'>
-                    <h3>주문 예상 금액</h3>
-                    <div className='cart-summary-sub'>
-                        <p className='cart-total'>
-                            <label htmlFor="">총 상품 가격 :</label>
+            { cartList && cartList.length > 0 ?
+                <>
+                    <div className='cart-summary'>
+                        <h3>주문 예상 금액</h3>
+                        <div className='cart-summary-sub'>
+                            <p className='cart-total'>
+                                <label htmlFor="">총 상품 가격 :</label>
+                                <span>{totalPrice.toLocaleString()}원</span>
+                            </p>
+                            <p className='cart-total'>
+                                <label htmlFor="">총 할인 가격 :</label>
+                                <span>0원</span>
+                            </p>
+                            <p className='cart-total'>
+                                <label htmlFor="">총 배송비 :</label>
+                                <span>0원</span>
+                            </p>
+                        </div>
+                        <p className='cart-total2'>
+                            <label>총 금액 : </label>
                             <span>{totalPrice.toLocaleString()}원</span>
                         </p>
-                        <p className='cart-total'>
-                            <label htmlFor="">총 할인 가격 :</label>
-                            <span>0원</span>
-                        </p>
-                        <p className='cart-total'>
-                            <label htmlFor="">총 배송비 :</label>
-                            <span>0원</span>
-                        </p>
                     </div>
-                    <p className='cart-total2'>
-                        <label>총 금액 : </label>
-                        <span>{totalPrice.toLocaleString()}원</span>
+                    <div className='cart-actions'>
+                        <button type='button' onClick={()=>{
+                            // navigate(이동주소, 전송객체)
+                            navigate("/checkout", {state: {cartList:cartList, totalPrice:totalPrice}});
+                        }}>주문하기</button>
+                    </div>
+                </>
+            :
+                <div>
+                    <p>장바구니에 담은 상품이 없습니다. &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to="/all">상품보러가기</Link>
                     </p>
+                    <img src="/images/cart.jpg" style={{width:"50%"}}/>
                 </div>
-                <div className='cart-actions'>
-                    <button type='button'>주문하기</button>
-                </div>
-            </>
+            }
         </div>
     );
 }
