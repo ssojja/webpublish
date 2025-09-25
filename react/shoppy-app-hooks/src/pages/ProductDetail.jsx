@@ -8,8 +8,11 @@ import { Detail } from '../components/detailTabs/Detail.jsx';
 import { Review } from '../components/detailTabs/Review.jsx';
 import { QnA } from '../components/detailTabs/QnA.jsx';
 import { Return } from '../components/detailTabs/Return.jsx';
+import { useCart } from '../hooks/useCart.js'
 
-export function ProductDetail({addCart}) {
+export function ProductDetail() {
+    const { addCart } = useCart();
+
     const { pid } = useParams();    // { pid: 1 }
     const [product, setProduct] = useState({});
     const [size, setSize] = useState("XS");
@@ -38,8 +41,6 @@ export function ProductDetail({addCart}) {
         }
         addCart(cartItem);
     }
-
-    // console.log(addCart);
 
     return (
         <div className='content'>

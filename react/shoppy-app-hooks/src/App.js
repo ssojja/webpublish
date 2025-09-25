@@ -23,11 +23,11 @@ export default function App() {
   const [cartCount, setCartCount] = useState(0);  // 1. 장바구니 수량 관리 : setCartCount
   const [cartItems, setCartItems] = useState([]); // 2. 장바구니 아이템 관리
   
-  const addCart = (cartItem) => { // <-- ProductDetail 쇼핑백 추가 이벤트 처리
-    // pid, size가 동일한 경우 qty 증가, cartItems 없는 경우 새로 추가
-    setCartItems(cartItemsCheck(cartItems, cartItem));
-    setCartCount(cartCount + 1);
-  }
+  // const addCart = (cartItem) => { // <-- ProductDetail 쇼핑백 추가 이벤트 처리
+  //   // pid, size가 동일한 경우 qty 증가, cartItems 없는 경우 새로 추가
+  //   setCartItems(cartItemsCheck(cartItems, cartItem));
+  //   setCartCount(cartCount + 1);
+  // }
 
   const updateCart = (cid, type) => {    
     if(type === undefined){ // 삭제
@@ -50,13 +50,13 @@ export default function App() {
     <CartProvider>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout cartCount={cartCount}/>}>
+          <Route path='/' element={<Layout />}>
             <Route index element={<Home/>} />
             <Route path='/all' element={<Products/>} />
-            <Route path='/cart' element={<Cart items={cartItems} updateCart={updateCart}/>} />
+            <Route path='/cart' element={<Cart updateCart={updateCart}/>} />
             <Route path='/login' element={<Login/>} />
             <Route path='/signup' element={<Signup/>} />
-            <Route path='/products/:pid' element={<ProductDetail addCart={addCart}/>}/>
+            <Route path='/products/:pid' element={<ProductDetail />}/>
             <Route path='/checkout' element={<CheckoutInfo />}/>
             <Route path='/support' element={<Support />}/>
           </Route>
