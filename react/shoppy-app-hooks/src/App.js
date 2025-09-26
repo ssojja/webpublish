@@ -14,24 +14,27 @@ import { Cart } from './pages/Cart.jsx';
 import { CheckoutInfo } from './pages/CheckoutInfo.jsx';
 import { Support } from './pages/Support.jsx';
 import { CartProvider } from '../src/context/CartContext.js';
+import { AuthProvider } from '../src/context/AuthContext.js';
 
 export default function App() {
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Layout/>}>
-            <Route index element={<Home/>} />
-            <Route path='/all' element={<Products/>} />
-            <Route path='/cart' element={<Cart/>} />
-            <Route path='/login' element={<Login/>} />
-            <Route path='/signup' element={<Signup/>} />
-            <Route path='/products/:pid' element={<ProductDetail/>}/>
-            <Route path='/checkout' element={<CheckoutInfo/>}/>
-            <Route path='/support' element={<Support/>}/>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Layout/>}>
+              <Route index element={<Home/>} />
+              <Route path='/all' element={<Products/>} />
+              <Route path='/cart' element={<Cart/>} />
+              <Route path='/login' element={<Login/>} />
+              <Route path='/signup' element={<Signup/>} />
+              <Route path='/products/:pid' element={<ProductDetail/>}/>
+              <Route path='/checkout' element={<CheckoutInfo/>}/>
+              <Route path='/support' element={<Support/>}/>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
+    </AuthProvider>
   );
 }
