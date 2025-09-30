@@ -24,4 +24,3 @@ export const addCart = (cartItem) => async (dispatch) => {
     dispatch(addCartItem({"cartItem":cartItem})); 
     dispatch(updateCartCount());
 }
-
