@@ -1,18 +1,26 @@
 import { useState, useEffect, useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 import { FiShoppingBag } from "react-icons/fi";
 import { GiShoppingCart } from "react-icons/gi";
-import { AuthContext } from '../../context/AuthContext.js';
-import { useAuth } from '../../hooks/useAuth.js';
-
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { getLogOut } from '../../feature/auth/authAPI.js';
 
 export function Header() {
-    const { isLogin } = useContext(AuthContext);
-    const { handleLogout } = useAuth();
-
-    const cartList = useSelector((state) => state.cart.cartList);
+    // const { isLogin } = useContext(AuthContext);
+    // const { handleLogout } = useAuth();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const cartCount = useSelector((state) => state.cart.cartCount);
+    const isLogIn = useSelector((state) => state.auth.isLogIn);
+
+    const handleLogOut = () => {
+        const succ = dispatch(getLogOut());
+        const logInInfo = localStorage.getItem("logInInfo");
+        if(succ && logInInfo === null) {
+            alert("로그아웃 되었습니다.");
+            navigate("/");
+        }
+    }
 
     return (
         <div className="header-outer">
@@ -27,23 +35,23 @@ export function Header() {
                         <GiShoppingCart className="header-icons"/>
                         <span className="header-icons-cart">{cartCount}</span>
                     </Link>
-                    { isLogin ? 
-                        // <Link to="/login">
-                            <button type="button" onClick={handleLogout}>Logout</button>
-                        // </Link>
-                    : 
+                    { !isLogIn && 
                         <Link to="/login">
                             <button type="button">Login</button>
-                        </Link>
+                        </Link>                    
+                    }
+                    { isLogIn &&
+                        <button type="button"
+                                onClick={handleLogOut}>Logout</button>
                     }
                     <Link to="/signup">
                         <button type="button">Signup</button>
-                    </Link>
-                    { isLogin &&  
+                    </Link>    
+                    { isLogIn &&
                         <Link to="/support">
                             <button type="button">Support</button>
-                        </Link>
-                    }
+                        </Link>                   
+                    }              
                 </nav>
             </div>
         </div>

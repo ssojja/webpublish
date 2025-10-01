@@ -29,9 +29,9 @@ export default function App() {
                 <Route index element={<Home/>} />
                 <Route path='/all' element={<Products/>} />
                 <Route path='/cart' element={
-                  // <ProtectedPageRoute>
+                  <ProtectedPageRoute>
                     <Cart/>
-                  // </ProtectedPageRoute>
+                  </ProtectedPageRoute>
                 } />
                 <Route path='/login' element={<Login/>} />
                 <Route path='/signup' element={<Signup/>} />

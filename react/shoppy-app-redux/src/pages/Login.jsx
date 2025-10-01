@@ -5,17 +5,15 @@ import { FaLock } from 'react-icons/fa';
 import { validateFormCheck } from '../utils/validate.js';
 import { useAuth } from '../hooks/useAuth.js'
 
+import { useDispatch, useSelector } from 'react-redux';
+import { getLogIn } from '../feature/auth/authAPI.js';
+
 export function Login() {
-    const { handleLogin } = useAuth();
-    
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const idRef = useRef(null);
     const pwdRef = useRef(null);
-
-    const initForm = {
-        id:"",
-        pwd:""
-    }
+    const initForm = { id:"", pwd:"" }
     const [formData, setFormData] = useState(initForm);
     const [errors, setErrors] = useState(initForm);
 
@@ -35,21 +33,17 @@ export function Login() {
             setErrors:setErrors
         }
 
-        if(validateFormCheck(param)){
-            // console.log(`서버전송 ---> `, formData);
-            const did = "test";
-            const dpwd = "1234";
-            if(did === formData.id && dpwd === formData.pwd){
-                handleLogin(formData.id);
-                alert("로그인에 성공하셨습니다.");
-                
-                navigate("/");
-            } else{
-                alert("로그인에 실패하셨습니다.");
-                idRef.current.focus();
-            }
-        }
+        const succ = dispatch(getLogIn(formData, param));
+        // dispatch(getLogIn(formData, param));     // 비동기
+        // console.log(`isLogIn2 --> `, isLogIn);   // 동기식 처리 -> false
 
+        if(succ){
+            alert("로그인에 성공하셨습니다.");
+            navigate("/");
+        } else {
+            alert("로그인에 실패하셨습니다.");
+            idRef.current.focus();
+        }
     }
 
     return (
